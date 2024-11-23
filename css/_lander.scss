@@ -1,0 +1,74 @@
+.lander {
+  text-align: center;
+  min-height: 50px;
+  background-color: rgb(63, 84, 114, 0.9);
+  width: 100%;
+  padding: 1rem 0;
+  &__container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    flex-direction: row;
+  }
+  &__link {
+    text-decoration: none;
+    font-size: 1rem;
+    color: white;
+
+    display: inline-flex; /* Align text and icon inline */
+    align-items: center;
+    &:hover {
+      opacity: 0.75;
+    }
+  }
+  &__view {
+    display: block; /* Default to visible */
+  }
+}
+.right,
+.left {
+  margin: 0.8rem;
+}
+.lander__link .right i {
+  display: inline-block;
+  transition: transform 0.3s ease;
+}
+
+.lander__link:hover .right i {
+  transform: translateX(5px);
+}
+.lander__link .left i {
+  display: inline-block;
+  transition: transform 0.3s ease;
+}
+
+.lander__link:hover .left i {
+  transform: translateX(-5px);
+}
+
+@media (max-width: 600px) {
+  .lander__view {
+    display: none; /* Hide the "view all categories" link */
+  }
+
+  /* Adjust "previous" to "prev" */
+  .lander__link:first-child .lander__text::before {
+    content: "prev"; /* Shortened text */
+    font-family: inherit; /* Ensures the font family is preserved */
+  }
+
+  .lander__link:first-child .lander__text {
+    visibility: hidden; /* Hides the original text but keeps its space */
+  }
+
+  /* Adjust "next" */
+  .lander__link:last-child .lander__text::before {
+    content: "next"; /* Shortened text */
+    font-family: inherit; /* Ensures the font family is preserved */
+  }
+
+  .lander__link:last-child .lander__text {
+    visibility: hidden; /* Hides the original text but keeps its space */
+  }
+}

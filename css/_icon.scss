@@ -1,0 +1,40 @@
+.menu {
+  color: white;
+  position: absolute;
+  top: 15px;
+  right: 10px;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+
+  &__link {
+    color: white;
+    text-decoration: none;
+    padding: 0.6rem;
+    font-size: 1.1rem;
+
+    border: 2px solid white;
+    border-radius: 50%;
+  }
+  &__ham-ber {
+    font-size: 2rem;
+  }
+}
+.logo {
+  position: absolute;
+  top: 8px;
+  left: 20px;
+}
+
+@media (min-width: 600px) {
+  .logo {
+    position: static;
+    margin-top: 15px;
+  }
+  .push-right {
+    margin-left: auto;
+  }
+  .menu {
+    display: none;
+  }
+}

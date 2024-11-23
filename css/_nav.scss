@@ -1,0 +1,97 @@
+@import "row";
+.header {
+  padding: 1rem 0;
+  margin: 0;
+  background-color: rgb(22, 31, 42, 0.8);
+}
+.login__link {
+  display: none;
+}
+.nav {
+  // background-color: rgb(22, 31, 42, 0.8);
+
+  margin: 0;
+  padding: 1em;
+  &__list {
+    z-index: 1;
+    position: fixed;
+    top: 0;
+    left: -450px;
+    transition: 0.6s ease;
+    width: 100%;
+    max-width: 250px;
+    height: 100vh;
+    background-color: rgb(22, 31, 42, 0.8);
+    list-style: none;
+    text-align: center;
+    gap: 1rem;
+    padding: 0;
+    margin: 0;
+    // display: none;
+  }
+  &__list.active {
+    // display: block;
+    left: 0;
+  }
+  &__item {
+    padding: 0.3rem 0;
+    position: relative;
+    display: block;
+    top: 50px;
+  }
+  &__item:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+  }
+  &__link {
+    display: block;
+    text-align: start;
+    text-decoration: none;
+    color: white;
+    font-size: 3rem;
+    font-weight: 600;
+    &:hover {
+      color: rgb(242, 163, 102);
+    }
+  }
+}
+@media (min-width: 600px) {
+  .nav {
+    padding: 0;
+    &__list {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      position: static;
+      left: 0;
+      height: auto;
+      background-clip: text;
+      padding: 0;
+      max-width: none;
+      margin: 0;
+    }
+    &__item {
+      position: static;
+      background-clip: text;
+    }
+    &__link {
+      font-size: 1.2rem;
+      display: inline;
+    }
+  }
+  .header {
+    padding: 0.5rem;
+  }
+  .login__link {
+    display: block;
+    color: white;
+    text-decoration: none;
+    padding: 1rem;
+    font-size: 1.3rem;
+    border: 2px solid white;
+    border-radius: 50%;
+    &:hover {
+      color: rgb(242, 163, 102);
+      border: 2px solid rgb(242, 163, 102);
+    }
+  }
+}

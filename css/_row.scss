@@ -1,0 +1,6 @@
+@mixin row($gap) {
+  gap: $gap;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
